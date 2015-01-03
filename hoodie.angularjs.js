@@ -191,7 +191,7 @@ angular.module('hoodie').provider('hoodie', function () {
       if (!hoodieUrl) {
         hoodieUrl = $location.absUrl().replace('/#' + $location.path(), '');
       }
-      return new Hoodie(hoodieUrl);
+      return window.hoodie = new Hoodie(hoodieUrl);
     }
   ];
 });
