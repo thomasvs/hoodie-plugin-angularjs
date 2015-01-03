@@ -12,7 +12,7 @@ angular.module('hoodie')
       if (!hoodieUrl) {
         hoodieUrl = $location.absUrl().replace('/#' + $location.path(), '');
       }
-      return new Hoodie(hoodieUrl);
+      return window.hoodie = new Hoodie(hoodieUrl);
     };
 
   });
